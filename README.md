@@ -37,3 +37,7 @@ a could storage app based on firebase built on top of React.js, Tailwindcss and 
 the direct link to the uploaded file is attached to the button
 
 ![add-folder.gif](./Assets/add-folder.gif)
+
+### Acknowledge
+
+this project can be considered a re-implementation of a project introduced in this great [video](https://www.youtube.com/watch?v=6XTRElVAZ9Y) by [WebDevSimplified](https://github.com/WebDevSimplified) upgrading firebase API to v9, using react router v6 and tailwindcss with daisyUI and some other additions ..!!
