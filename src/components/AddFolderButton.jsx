@@ -44,7 +44,7 @@ const AddFolderButton = ({ currentFolder }) => {
 
     return (
         <>
-            <Modal id={'folder'} show={show} onClose={closeModal}>
+            <Modal show={show} onClose={closeModal}>
                 <div className="flex flex-col justify-between">
                     <TextField
                         labelText="Folder Name"

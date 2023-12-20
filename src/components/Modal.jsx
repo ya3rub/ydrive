@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-const Modal = ({ show, onClose, children, id }) => {
-    const m = document.getElementById(id);
-    if (show) {
-        if (m) {
-            m.showModal();
-        }
-    } else {
-        if (m) {
-            m.close();
+const Modal = ({ show, onClose, children }) => {
+    const modRef = useRef();
+    if (modRef.current) {
+        if (show) {
+            modRef.current.showModal();
+        } else {
+            modRef.current.close();
         }
     }
     return (
-        <dialog id={id} className="modal">
+        <dialog ref={modRef} className="modal">
             <div className="modal-box pt-10">
                 <form
                     onSubmit={(e) => {
@@ -26,9 +24,7 @@ const Modal = ({ show, onClose, children, id }) => {
                         onClick={(e) => {
                             e.preventDefault();
                             onClose();
-                            if (m) {
-                                m.close();
-                            }
+                            modRef.current.close();
                         }}
                     >
                         ✕

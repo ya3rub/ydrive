@@ -132,7 +132,7 @@ const AddFileButton = ({ currentFolder }) => {
     };
     return (
         <>
-            <Modal id={'file'} show={show} onClose={closeModal}>
+            <Modal show={show} onClose={closeModal}>
                 <div className="flex flex-col justify-between">
                     <FileInput
                         onChange={(e) => {
